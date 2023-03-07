@@ -112,7 +112,7 @@
                                 <div class="row">
                                     <div class="col-sm-4 grid-margin">
                                         <div class="position-relative">
-                                            <a href="">
+                                            <a href="{{ route('slug', $post->slug) }}">
                                                 <div class="rotate-img">
                                                     <img src="{{ Storage::url('') . $post->image }}" alt="thumb"
                                                         class="img-fluid" />
@@ -311,7 +311,7 @@
                                                 <span class="mr-2">Photo </span>10 Minutes ago
                                             </p>
                                             <p class="my-3 fs-15">
-                                                Lorem Ipsum has been the industry's standard dummy
+                                                Lorem Ipsum has been the industry'standard dummy
                                                 text ever since the 1500s, when an unknown printer
                                                 took
                                             </p>

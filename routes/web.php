@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,11 @@ Route::get('/', function () {
 */
 
 
-//route resource
-Route::resource('/', \App\Http\Controllers\PostController::class);
+//route home
+Route::get('/', [PostController::class, 'index']);
+
+//route single post
+Route::get('/{slug}', [PostController::class, 'post'])->name('slug');
 
 
 Route::group(['prefix' => 'admin'], function () {
